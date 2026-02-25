@@ -96,6 +96,23 @@ body {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
+    /* Tambahkan dua baris di bawah ini */
+    white-space: nowrap;
+    /* Mencegah teks patah menjadi dua baris */
+    flex-shrink: 0;
+    /* Mencegah brand menciut saat menu navigasi lebar */
+}
+
+/* Tambahkan sedikit penyesuaian untuk layar sangat kecil */
+@media (max-width: 480px) {
+    .nav-brand {
+        font-size: 1.2rem;
+        /* Mengecilkan font sedikit agar tidak memakan tempat */
+    }
+
+    .brand-icon {
+        font-size: 1.4rem;
+    }
 }
 
 .brand-icon {
@@ -111,8 +128,10 @@ body {
 
 .nav-menu {
     display: flex;
-    gap: var(--spacing-lg);
+    gap: 1rem;
+    /* Kurangi dari spacing-lg agar tidak terlalu lebar */
     list-style: none;
+    align-items: center;
 }
 
 .nav-link {
